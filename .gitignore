@@ -1,6 +1,9 @@
 # Log Files
 *.log
 
+# Airflow Log Directories
+/logs/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
