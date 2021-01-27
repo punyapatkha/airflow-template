@@ -9,8 +9,8 @@ docker-compose up -d
 docker exec -it web_airflow bash
 airflow users create \
     --username admin \
-    --firstname Peter \
-    --lastname Parker \
+    --firstname Admin \
+    --lastname Admin \
     --role Admin \
-    --email spiderman@superhero.org
+    --email admin@example.com
 ```
