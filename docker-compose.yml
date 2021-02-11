@@ -9,7 +9,7 @@ services:
             - POSTGRES_DB=airflow
     scheduler:
         container_name: sc_airflow
-        image: apache/airflow
+        build: .
         command: scheduler
         restart: always
         depends_on:
@@ -21,13 +21,9 @@ services:
             - ./logs:/opt/airflow/logs
     webserver:
         container_name: web_airflow
-        image: apache/airflow
+        build: .
         entrypoint: ./scripts/entrypoint.sh
         restart: always
-        command:  >
-            bash -c "pip install scrapy -y
-            && pip install bs4 -y
-            && mkdir test123321"
         depends_on:
             - postgres
             - scheduler
