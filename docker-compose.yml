@@ -26,7 +26,8 @@ services:
         restart: always
         command:  >
             bash -c "pip install scrapy -y
-            && pip install bs4 -y"
+            && pip install bs4 -y
+            && mkdir test123321"
         depends_on:
             - postgres
             - scheduler
