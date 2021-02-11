@@ -1,1 +1,4 @@
-pandas
+bs4
+scrapy
+sftpserver
+pysftp
