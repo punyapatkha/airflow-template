@@ -10,7 +10,6 @@ services:
     scheduler:
         container_name: sc_airflow
         image: apache/airflow
-        entrypoint: ./scripts/entrypoint2.sh
         command: scheduler          
         restart: always
         depends_on:
