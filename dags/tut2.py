@@ -2,7 +2,7 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 import requests
 import datetime
-#import scrapy
+import scrapy
 import bs4
 import pandas
 import numpy
@@ -10,7 +10,17 @@ import sqlalchemy
 import mysql.connector 
 import psycopg2
 
- 
+import pysftp
+import sftpserver
+import time
+import socket
+import optparse
+import sys
+import textwrap
+import os
+import paramiko 
+
+
 def test_1122(**context):
     return print('success')
 
