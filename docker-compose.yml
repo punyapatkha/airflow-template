@@ -10,7 +10,7 @@ services:
     scheduler:
         container_name: sc_airflow
         #image: apache/airflow
-        build:.
+        build: .
         command: scheduler
         restart: always
         depends_on:
@@ -23,7 +23,7 @@ services:
     webserver:
         container_name: web_airflow
         #image: apache/airflow
-        build:.
+        build: .
         entrypoint: ./scripts/entrypoint.sh
         restart: always
         depends_on:
