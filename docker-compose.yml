@@ -10,9 +10,8 @@ services:
     scheduler:
         container_name: sc_airflow
         image: apache/airflow
-        command: bash -c "pip install bs4 && webserver"
-                
-
+        command: bash -c "pip install bs4"
+        command: scheduler          
         restart: always
         depends_on:
             - postgres
