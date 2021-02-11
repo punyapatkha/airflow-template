@@ -10,10 +10,7 @@ services:
     scheduler:
         container_name: sc_airflow
         image: apache/airflow
-        command: bash -c "pip install bs4"
-        command: pip install bs4
-        command: python pip install bs4
-        command: python -c "pip install bs4"        
+        build: .
         command: scheduler          
         restart: always
         depends_on:
@@ -26,8 +23,8 @@ services:
     webserver:
         container_name: web_airflow
         image: apache/airflow
+        build: .
         entrypoint: ./scripts/entrypoint.sh
-        command: bash -c "pip install bs4"
         restart: always
         depends_on:
             - postgres
