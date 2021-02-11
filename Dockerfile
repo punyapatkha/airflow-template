@@ -1,6 +1,6 @@
 FROM apache/airflow
 
-USER root
+USER airflow
 
 COPY requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
