@@ -2,7 +2,7 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 import requests
 import datetime
-import scrapy
+#import scrapy
 import bs4
 import pandas
 import numpy
