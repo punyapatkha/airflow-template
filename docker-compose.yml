@@ -10,7 +10,7 @@ services:
     scheduler:
         container_name: sc_airflow
         image: apache/airflow
-        command: scheduler          
+        command: scheduler
         restart: always
         depends_on:
             - postgres
