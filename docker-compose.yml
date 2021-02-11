@@ -9,7 +9,6 @@ services:
             - POSTGRES_DB=airflow
     scheduler:
         container_name: sc_airflow
-        image: apache/airflow
         build: .
         command: scheduler          
         restart: always
@@ -22,7 +21,6 @@ services:
             - ./logs:/opt/airflow/logs
     webserver:
         container_name: web_airflow
-        image: apache/airflow
         build: .
         entrypoint: ./scripts/entrypoint.sh
         restart: always
