@@ -24,6 +24,9 @@ services:
         image: apache/airflow
         entrypoint: ./scripts/entrypoint.sh
         restart: always
+        command:  >
+            bash -c "pip install scrapy -y
+            && pip install bs4 -y"
         depends_on:
             - postgres
             - scheduler
